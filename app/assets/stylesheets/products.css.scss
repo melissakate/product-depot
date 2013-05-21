@@ -1,4 +1,9 @@
 .products {
+  img{
+    width: 40px;
+  }
+
+  
   table{
     border-collapse: collapase;
   }
@@ -9,7 +14,7 @@
   }
 
   .list_image {
-    with: 60px;
+    width: 60px;
     height: 70px;
   }
 
@@ -23,7 +28,7 @@
   dt{
     color: #244;
     font-weight: bold;
-    font-sized: larger;
+    font-size: larger;
   }
 
   dd {
@@ -32,7 +37,7 @@
 }
 
 .list _actions {
-  font-sized: x-small;
+  font-size: x-small;
   text-align: right;
   padding-left: lem;
 }

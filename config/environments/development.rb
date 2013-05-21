@@ -1,5 +1,5 @@
 Depot::Application.configure do
-config.action_controller.perform_caching = true
+config.action_controller.perform_caching = false
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
