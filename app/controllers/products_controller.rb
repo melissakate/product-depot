@@ -1,13 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-    @product= Product.order(:title)
-    @product = Product.all
+    @products = Product.order(:title)
+    @products = Product.all
   end
 
   def show
- @product = Product.find(params[:id])
- @product = product.find store(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def new
@@ -51,13 +50,12 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
+    @products = Product.find(params[:id])
+    @products.destroy
 
     respond_to do |format|
       format.html { redirect_to products_url }
       format.json { head :no_content }
-      redirect_to product_path
     end
   end
 end

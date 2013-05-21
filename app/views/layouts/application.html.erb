@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Books Online Store</title>
+  <title>Pragmatic Books Online Store</title>
   <%= stylesheet_link_tag "application", :media => "all",
     "data-turbolink-track" => true  %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= controller.controller_name %>">
+<body class='<%= controller.controller_name %>'>
   <div id="banner">
-    <%= image_tag("books.jpg")%>
-    <%= @page_title || "Pragmatic Bookshelf"%>
+    <%= image_tag("books.jpg") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
   <div id="columns">
     <div id="slide">
