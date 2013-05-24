@@ -1,5 +1,4 @@
 Depot::Application.configure do
-config.action_controller.perform_caching = false
 config.action_controller.perform_caching = true
   # Settings specified here will take precedence over those in config/application.rb
 
