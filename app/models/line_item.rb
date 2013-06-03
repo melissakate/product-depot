@@ -4,3 +4,7 @@ class LineItem < ActiveRecord::Base
   
   attr_accessible :product, :cart
 end
+
+def
+  product.price * quantity
+end

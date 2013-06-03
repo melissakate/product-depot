@@ -7,6 +7,10 @@ class LineItemsController < ApplicationController
 
   # GET /line_items
   # GET /line_items.json
+def line_item_params
+  params.require(:line_item).permit(:product_id)
+end
+
   def index
     @line_items = LineItem.all
 
@@ -46,24 +50,25 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
-    product = Product.find(params[:product_id])
-    @line_item = LineItem.new(params[:line_item])
-    @line_item = @cart.line_items.build(product: product)
+    #product = Product.find(params[:product_id])
     #@line_item = @cart.add_product(product.id)
-    #product = Product.new(params[:product])
+    #@line_item = LineItem.new(params[:line_item])
+    #@line_item = @cart.line_items.build(product: product)
+    ##product = Product.new(params[:product])
 
-    respond_to do |format|
-      if @line_item.save
-        format.html { redirect_to @line_item.cart, 
-          notice: 'Line item was successfully created.' }
-        format.json { render action:'show', 
-          status: :created, location: @line_item }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @line_item.errors, 
-          status: :unprocessable_entity }
-      end
-    end
+    #respond_to do |format|
+    #  if @line_item.save
+    #    form.html { redirect_to @line_item.cart }
+    #    format.html { redirect_to @line_item.cart, 
+    #      notice: 'Line item was successfully created.' }
+    #    format.json { render action:'show', 
+    #      status: :created, location: @line_item }
+    #  else
+    #    format.html { render action: "new" }
+    #    format.json { render json: @line_item.errors, 
+    #      status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # PUT /line_items/1
